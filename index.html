@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>testing</title>
+    <link href="/public/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+</head>
+<body>
+    <!--
+  This example requires Tailwind CSS v2.0+ 
+  
+  This example requires some changes to your config:
+  
+  ```
+  // tailwind.config.js
+  module.exports = {
+    // ...
+    plugins: [
+      // ...
+      require('@tailwindcss/forms'),
+      require('@tailwindcss/aspect-ratio'),
+    ],
+  }
+  ```
+-->
+<div class="bg-white">
+<div>
+    <!-- This example requires Tailwind CSS v2.0+ -->
+<nav class="bg-white shadow">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex h-16 justify-between">
+        <div class="flex">
+          <div class="flex flex-shrink-0 items-center">
+            <img class="block h-8 w-auto lg:hidden" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="Your Company">
+            <img class="hidden h-8 w-auto lg:block" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="Your Company">
+          </div>
+          <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+            <!-- Current: "border-indigo-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" -->
+            <a href="#" class="inline-flex items-center border-b-2 border-indigo-500 px-1 pt-1 text-sm font-medium text-gray-900">Technology</a>
+            <a href="#" class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">Collections</a>
+            <a href="#" class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">Random</a>
+            <a href="#" class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">Raccoon</a>
+          </div>
+        </div>
+        <div class="hidden sm:ml-6 sm:flex sm:items-center">
+            <li class="font-sans block mt-4 lg:inline-block lg:mt-0 lg:ml-6 align-middle text-black hover:text-gray-700">
+                <a href="#" role="button" class="relative flex">
+                  <svg class="flex-1 w-8 h-8 fill-current" viewbox="0 0 24 24">
+                    <path d="M17,18C15.89,18 15,18.89 15,20A2,2 0 0,0 17,22A2,2 0 0,0 19,20C19,18.89 18.1,18 17,18M1,2V4H3L6.6,11.59L5.24,14.04C5.09,14.32 5,14.65 5,15A2,2 0 0,0 7,17H19V15H7.42A0.25,0.25 0 0,1 7.17,14.75C7.17,14.7 7.18,14.66 7.2,14.63L8.1,13H15.55C16.3,13 16.96,12.58 17.3,11.97L20.88,5.5C20.95,5.34 21,5.17 21,5A1,1 0 0,0 20,4H5.21L4.27,2M7,18C5.89,18 5,18.89 5,20A2,2 0 0,0 7,22A2,2 0 0,0 9,20C9,18.89 8.1,18 7,18Z"/>
+                    </svg>
+                    <span class="absolute right-0 top-0 rounded-full bg-red-600 w-4 h-4 top right p-0 m-0 text-white font-mono text-sm  leading-tight text-center">5
+                  </span>
+                </a>
+              </li>
+  
+          <!-- Profile dropdown -->
+          <div class="relative ml-3">
+            <div>
+              <button type="button" class="flex rounded-full bg-white text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                <span class="sr-only">Open user menu</span>
+                <img class="h-8 w-8 rounded-full" src="https://i.pinimg.com/originals/93/23/82/932382a425886ff9e66dcd7c8b8e8202.jpg" alt="">
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="-mr-2 flex items-center sm:hidden">
+          <!-- Mobile menu button -->
+          <button type="button" class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-controls="mobile-menu" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <!--
+              Icon when menu is closed.
+  
+              Heroicon name: outline/bars-3
+  
+              Menu open: "hidden", Menu closed: "block"
+            -->
+            <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+            <!--
+              Icon when menu is open.
+  
+              Heroicon name: outline/x-mark
+  
+              Menu open: "block", Menu closed: "hidden"
+            -->
+            <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+  
+</div>
+  
+    <main>
+      <!-- Hero -->
+      <div class="flex flex-col border-b border-gray-200 lg:border-0" >
+        <nav aria-label="Offers" class="order-last lg:order-first hidden lg:block">
+          <div class="mx-auto max-w-7xl lg:px-8">
+            <ul role="list" class="grid grid-cols-1 divide-y divide-gray-200 lg:grid-cols-3 lg:divide-y-0 lg:divide-x">
+              <li class="flex flex-col">
+                <a href="#" class="relative flex flex-1 flex-col justify-center bg-white py-6 px-4 text-center focus:z-10 ">
+                  <p class="text-sm text-gray-500">Join our Philip Stein club</p>
+                  <p class="font-semibold text-gray-900">Get Exclusive Deals</p>
+                </a>
+              </li>
+  
+              <li class="flex flex-col">
+                <a href="#" class="relative flex flex-1 flex-col justify-center bg-white py-6 px-4 text-center focus:z-10">
+                  <p class="text-sm text-gray-500">I have no idea what to put here sorry!</p>
+                  <p class="font-semibold text-gray-900">Raccoons are great pets!</p>
+                </a>
+              </li>
+  
+              <li class="flex flex-col">
+                <a href="#" class="relative flex flex-1 flex-col justify-center bg-white py-6 px-4 text-center focus:z-10">
+                  <p class="text-sm text-gray-500">Join our newsletter to stay up to date with the latest Philip Stein News</p>
+                  <p class="font-semibold text-gray-900">15% off your first order after signing up!</p>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+  
+        <div class="relative">
+          <div aria-hidden="true" class="absolute hidden h-full w-1/2 bg-gray-100 lg:block">
+            <div aria-hidden="true" class="absolute inset-0">
+                <div class="absolute inset-0 mx-auto max-w-7xl overflow-hidden xl:px-8">
+                    <img src="https://cdn.pixabay.com/photo/2016/04/15/04/02/water-1330252_960_720.jpg" alt="" class="h-full w-full object-cover object-center">
+                </div>
+                <div class="absolute inset-0 bg-white bg-opacity-10"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-white via-white"></div>
+          </div></div>
+          <div class="relative ">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:grid lg:grid-cols-2 lg:px-8">
+              <div class="mx-auto max-w-2xl py-24 lg:max-w-none lg:py-64">
+                <div class="lg:pr-16">
+                  <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl xl:text-6xl">Natural Frequency Technology</h1>
+                  <p class="mt-4 text-xl text-gray-600">Philip Stein’s proprietary technology resonates with the body, strengthening our bio magnetic field to reduce stress, improve sleep and boost energy in humans.</p>
+                  <div class="mt-6">
+                    <a href="#" class="inline-block rounded-md border border-transparent bg-indigo-600 py-3 px-8 font-medium text-white hover:bg-indigo-700">Learn More</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="h-48 w-full sm:h-64 lg:absolute lg:top-0 lg:right-0 lg:h-full lg:w-1/2">
+            <img src="https://www.rd.com/wp-content/uploads/2021/04/GettyImages-91702654-scaled-e1617285570216.jpg" alt="" class="h-full w-full object-cover object-center">
+          </div>
+        </div>
+      </div>  
+      <!-- Collections -->
+      <section aria-labelledby="collections-heading" class="bg-gray-100">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="mx-auto max-w-2xl py-16 sm:py-24 lg:max-w-none lg:py-32">
+            <h2 id="collections-heading" class="text-2xl font-bold text-gray-900">New Collections</h2>
+  
+            <div class="mt-6 space-y-12 lg:grid lg:grid-cols-3 lg:gap-x-6 lg:space-y-0">
+              <div class="group relative">
+                <div class="relative h-80 w-full overflow-hidden rounded-lg bg-white group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
+                  <img src="https://images.unsplash.com/photo-1602074754821-0bcca1d76613?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fHdhdGNoJTIwaGFuZHxlbnwwfHwwfHw%3D&w=1000&q=80" alt="Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug." class="h-full w-full object-cover object-center">
+                </div>
+                <h3 class="mt-6 text-base font-semibold text-gray-900">
+                  <a href="#">
+                    <span class="absolute inset-0"></span>
+                    Signature Collection
+                  </a>
+                </h3>
+              </div>
+  
+              <div class="group relative">
+                <div class="relative h-80 w-full overflow-hidden rounded-lg bg-white group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
+                  <img src="https://media.istockphoto.com/photos/premium-mens-watch-on-hand-close-up-picture-id1065329058?k=20&m=1065329058&s=612x612&w=0&h=W2ibh4AmHRZO-T6TDgVmL79ql1iRbA1DsLka6mVX4Oc=" alt="Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant." class="h-full w-full object-cover object-center">
+                </div>
+                <h3 class="mt-6 text-base font-semibold text-gray-900">
+                  <a href="#">
+                    <span class="absolute inset-0"></span>
+                    Limitless Collection
+                  </a>
+                </h3>
+              </div>
+  
+              <div class="group relative">
+                <div class="relative h-80 w-full overflow-hidden rounded-lg bg-white group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
+                  <img src="https://images.unsplash.com/photo-1497752531616-c3afd9760a11?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cmFjY29vbnxlbnwwfHwwfHw%3D&w=1000&q=80" alt="Collection of four insulated travel bottles on wooden shelf." class="h-full w-full object-cover object-center">
+                </div>
+                <h3 class="mt-6 text-base font-semibold text-gray-900">
+                  <a href="#">
+                    <span class="absolute inset-0"></span>
+                    Raccoon Collection
+                  </a>
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--sleep and sport-->
+
+      <!--
+  This example requires Tailwind CSS v2.0+ 
+  
+  This example requires some changes to your config:
+  
+  ```
+  // tailwind.config.js
+  module.exports = {
+    // ...
+    plugins: [
+      // ...
+      require('@tailwindcss/aspect-ratio'),
+    ],
+  }
+  ```
+-->
+<div class="bg-white">
+    <section aria-labelledby="features-heading" class="mx-auto max-w-7xl py-32 sm:px-2 lg:px-8">
+      <div class="mx-auto max-w-2xl px-4 lg:max-w-none lg:px-0">
+        <div class="max-w-3xl">
+          <h2 id="features-heading" class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Bracelet ShowCase</h2>
+          <p class="mt-4 text-gray-500">Generic Text</p>
+        </div>
+  
+        <div class="mt-4">
+          <div class="-mx-4 flex overflow-x-auto sm:mx-0">
+            <div class="flex-auto border-b border-gray-200 px-4 sm:px-0">
+              <div class="-mb-px flex space-x-10" aria-orientation="horizontal" role="tablist">
+                <!-- Current: "border-indigo-500 text-indigo-600", Default: "border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300" -->
+                <button id="features-tab-1" class="border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 whitespace-nowrap border-b-2 py-6 text-sm font-medium" aria-controls="features-panel-1" role="tab" type="button">Watches</button>
+  
+                <button id="features-tab-2" class="border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 whitespace-nowrap border-b-2 py-6 text-sm font-medium" aria-controls="features-panel-2" role="tab" type="button">Sports</button>
+  
+                <button id="features-tab-3" class="border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 whitespace-nowrap border-b-2 py-6 text-sm font-medium" aria-controls="features-panel-3" role="tab" type="button">Sleep</button>
+  
+                <button id="features-tab-4" class="border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 whitespace-nowrap border-b-2 py-6 text-sm font-medium" aria-controls="features-panel-4" role="tab" type="button">Technology</button>
+              </div>
+            </div>
+          </div>
+  
+          <div id="features-panel-1" class="space-y-16 pt-10 lg:pt-16" aria-labelledby="features-tab-1" role="tabpanel" tabindex="0">
+            <div class="flex flex-col-reverse lg:grid lg:grid-cols-12 lg:gap-x-8">
+              <div class="mt-6 lg:col-span-5 lg:mt-0">
+                <h3 class="text-lg font-medium text-gray-900">Watches</h3>
+                <p class="mt-2 text-sm text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
+              </div>
+              <div class="lg:col-span-7">
+                <div class="aspect-w-2 aspect-h-1 overflow-hidden rounded-lg bg-gray-100 sm:aspect-w-5 sm:aspect-h-2">
+                  <img src="https://images8.alphacoders.com/747/747951.jpg" alt="Maple organizer base with slots, supporting white polycarbonate trays of various sizes." class="object-cover object-center">
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div id="features-panel-2" class="space-y-16 pt-10 lg:pt-16" aria-labelledby="features-tab-2" role="tabpanel" tabindex="0">
+            <div class="flex flex-col-reverse lg:grid lg:grid-cols-12 lg:gap-x-8">
+              <div class="mt-6 lg:col-span-5 lg:mt-0">
+                <h3 class="text-lg font-medium text-gray-900">different watch</h3>
+                <p class="mt-2 text-sm text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
+              </div>
+              <div class="lg:col-span-7">
+                <div class="aspect-w-2 aspect-h-1 overflow-hidden rounded-lg bg-gray-100 sm:aspect-w-5 sm:aspect-h-2">
+                  <img src="https://c4.wallpaperflare.com/wallpaper/146/154/533/fossil-watches-backgrounds-stones-fossil-wallpaper-preview.jpg" alt="Walnut organizer base with pen, sticky note, phone, and bin trays, next to modular drink coaster attachment." class="object-cover object-center">
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div id="features-panel-3" class="space-y-16 pt-10 lg:pt-16" aria-labelledby="features-tab-3" role="tabpanel" tabindex="0">
+            <div class="flex flex-col-reverse lg:grid lg:grid-cols-12 lg:gap-x-8">
+              <div class="mt-6 lg:col-span-5 lg:mt-0">
+                <h3 class="text-lg font-medium text-gray-900">Watch 3</h3>
+                <p class="mt-2 text-sm text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
+              </div>
+              <div class="lg:col-span-7">
+                <div class="aspect-w-2 aspect-h-1 overflow-hidden rounded-lg bg-gray-100 sm:aspect-w-5 sm:aspect-h-2">
+                  <img src="https://images.unsplash.com/photo-1539874754764-5a96559165b0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHdhdGNofGVufDB8fDB8fA%3D%3D&w=1000&q=80" alt="Walnut organizer base with white polycarbonate trays in the kitchen with various kitchen utensils." class="object-cover object-center">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+
+      <!---
+      weekly deals section 
+      --->
+<div class="bg-white">
+    <div class="py-16 sm:py-24 lg:mx-auto lg:max-w-7xl lg:px-8">
+      <div class="flex items-center justify-between px-4 sm:px-6 lg:px-0">
+        <h2 class="text-2xl font-bold tracking-tight text-gray-900">Weekly Deals</h2>
+        <a href="#" class="hidden text-sm font-semibold text-indigo-600 hover:text-indigo-500 sm:block">
+          See All Weekly Deals
+          <span aria-hidden="true"> &rarr;</span>
+        </a>
+      </div>
+  
+      <div class="relative mt-8">
+        <div class="relative -mb-6 w-full overflow-x-auto pb-6">
+          <ul role="list" class="mx-4 inline-flex space-x-8 sm:mx-6 lg:mx-0 lg:grid lg:grid-cols-4 lg:gap-x-8 lg:space-x-0">
+            <li class="inline-flex w-64 flex-col text-center lg:w-auto">
+              <div class="group relative">
+                <div class="aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-gray-200">
+                  <img src="https://images.unsplash.com/photo-1587925358603-c2eea5305bbc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8d3Jpc3R3YXRjaHxlbnwwfHwwfHw%3D&w=1000&q=80" alt="Black machined steel pen with hexagonal grip and small white logo at top." class="h-full w-full object-cover object-center group-hover:opacity-75">
+                </div>
+                <div class="mt-6">
+                  <p class="text-sm text-gray-500">Signature</p>
+                  <h3 class="mt-1 font-semibold text-gray-900">
+                    <a href="#">
+                      <span class="absolute inset-0"></span>
+                      Model - GN10029
+                    </a>
+                  </h3>
+                  <p class="mt-1 text-gray-900">$35</p>
+                </div>
+              </div>
+            </li>
+            <li class="inline-flex w-64 flex-col text-center lg:w-auto">
+                <div class="group relative">
+                  <div class="aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-gray-200">
+                    <img src="https://cdn.vox-cdn.com/thumbor/AofY58g_bDa6ETfiVh0DVoQld1s=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/19993603/DSCF7222.jpg" alt="Black machined steel pen with hexagonal grip and small white logo at top." class="h-full w-full object-cover object-center group-hover:opacity-75">
+                  </div>
+                  <div class="mt-6">
+                    <p class="text-sm text-gray-500">Skyfinder</p>
+                    <h3 class="mt-1 font-semibold text-gray-900">
+                      <a href="#">
+                        <span class="absolute inset-0"></span>
+                        Model - CLT200SSG
+                      </a>
+                    </h3>
+                    <p class="mt-1 text-gray-900">$799</p>
+                  </div>
+                </div>
+              </li>
+                <li class="inline-flex w-64 flex-col text-center lg:w-auto">
+                <div class="group relative">
+                  <div class="aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-gray-200">
+                    <img src="https://www.iwc.com/content/dam/homepage/august-15-2022/hp-tile-discover-pilots-watches.jpg.transform.article_image_335_2x.jpeg" alt="Black machined steel pen with hexagonal grip and small white logo at top." class="h-full w-full object-cover object-center group-hover:opacity-75">
+                  </div>
+                  <div class="mt-6">
+                    <p class="text-sm text-gray-500">Colors</p>
+                    <h3 class="mt-1 font-semibold text-gray-900">
+                      <a href="#">
+                        <span class="absolute inset-0"></span>
+                        Model - ZBF2002
+                      </a>
+                    </h3>
+                    <p class="mt-1 text-gray-900">$500</p>
+                  </div>
+                </div>
+              </li>
+                <li class="inline-flex w-64 flex-col text-center lg:w-auto">
+                <div class="group relative">
+                  <div class="aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-gray-200">
+                    <img src="https://curiodyssey.org/wp-content/uploads/2017/03/Mammals-Raccoon.jpg" alt="Black machined steel pen with hexagonal grip and small white logo at top." class="h-full w-full object-cover object-center group-hover:opacity-75">
+                  </div>
+                  <div class="mt-6">
+                    <p class="text-sm text-gray-500">Best Boy</p>
+                    <h3 class="mt-1 font-semibold text-gray-900">
+                      <a href="#">
+                        <span class="absolute inset-0"></span>
+                        Model - RACCOON102
+                      </a>
+                    </h3>
+                    <p class="mt-1 text-gray-900">$999999</p>
+                  </div>
+                </div>
+              </li>
+  
+            <!-- More products... -->
+          </ul>
+        </div>
+      </div>
+  
+      <div class="mt-12 flex px-4 sm:hidden">
+        <a href="#" class="text-sm font-semibold text-indigo-600 hover:text-indigo-500">
+          See All Weekly Deals
+          <span aria-hidden="true"> &rarr;</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+      <!-- Sale and testimonials -->
+      <div class="relative overflow-hidden">
+        <!-- Decorative background image and gradient -->
+        <div aria-hidden="true" class="absolute inset-0">
+          <div class="absolute inset-0 mx-auto max-w-7xl overflow-hidden xl:px-8">
+            <img src="https://cdn.pixabay.com/photo/2016/04/15/04/02/water-1330252_960_720.jpg" alt="" class="h-full w-full object-cover object-center">
+          </div>
+          <div class="absolute inset-0 bg-white bg-opacity-75"></div>
+          <div class="absolute inset-0 bg-gradient-to-t from-white via-white"></div>
+        </div>
+  
+        <!-- Sale -->
+        <section aria-labelledby="sale-heading" class="relative mx-auto flex max-w-7xl flex-col items-center px-4 pt-32 text-center sm:px-6 lg:px-8">
+          <div class="mx-auto max-w-2xl lg:max-w-none">
+            <h2 id="sale-heading" class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">Get 25% off using code LD25</h2>
+            <p class="mx-auto mt-4 max-w-xl text-xl text-gray-600">Enjoy Great Deals with our Labor Day Sale 25% off on almost all products!</p>
+            <p class="mt-1 text-sm text-gray-500">*Hero Traveler Limitless excluded</p>
+            <a href="#" class="mt-6 inline-block w-full rounded-md border border-transparent bg-gray-900 py-3 px-8 font-medium text-white hover:bg-gray-800 sm:w-auto">Shop Now</a>
+          </div>
+          <br>
+          <br>
+          <br>
+          <br>
+        </section>
+
+    </main>
+  
+    <footer aria-labelledby="footer-heading" class="bg-white">
+      <h2 id="footer-heading" class="sr-only">Footer</h2>
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="border-t border-gray-200">
+          <div class="pt-16 pb-20">
+            <div class="md:flex md:justify-center">
+              <img src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="" class="h-8 w-auto">
+            </div>
+            <div class="mx-auto mt-16 max-w-5xl xl:grid xl:grid-cols-2 xl:gap-8">
+              <div class="grid grid-cols-2 gap-8 xl:col-span-2">
+                <div class="space-y-12 md:grid md:grid-cols-2 md:gap-8 md:space-y-0">
+                  <div>
+                    <h3 class="text-sm font-medium text-gray-900">Products</h3>
+                    <ul role="list" class="mt-6 space-y-6">
+                      <li class="text-sm">
+                        <a href="#" class="text-gray-500 hover:text-gray-600">Sleep</a>
+                      </li>
+  
+                      <li class="text-sm">
+                        <a href="#" class="text-gray-500 hover:text-gray-600">Wellness</a>
+                      </li>
+  
+                      <li class="text-sm">
+                        <a href="#" class="text-gray-500 hover:text-gray-600">Sports</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h3 class="text-sm font-medium text-gray-900">Customer Service</h3>
+                    <ul role="list" class="mt-6 space-y-6">
+                      <li class="text-sm">
+                        <a href="#" class="text-gray-500 hover:text-gray-600">Contact</a>
+                      </li>
+  
+                      <li class="text-sm">
+                        <a href="#" class="text-gray-500 hover:text-gray-600">Shipping</a>
+                      </li>
+  
+                      <li class="text-sm">
+                        <a href="#" class="text-gray-500 hover:text-gray-600">Returns</a>
+                      </li>
+  
+                      <li class="text-sm">
+                        <a href="#" class="text-gray-500 hover:text-gray-600">Warranty</a>
+                      </li>
+  
+                      <li class="text-sm">
+                        <a href="#" class="text-gray-500 hover:text-gray-600">Secure Payments</a>
+                      </li>
+  
+                      <li class="text-sm">
+                        <a href="#" class="text-gray-500 hover:text-gray-600">FAQ</a>
+                      </li>
+  
+                      <li class="text-sm">
+                        <a href="#" class="text-gray-500 hover:text-gray-600">Find a store</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="space-y-12 md:grid md:grid-cols-2 md:gap-8 md:space-y-0">
+                  <div>
+                    <h3 class="text-sm font-medium text-gray-900">Company</h3>
+                    <ul role="list" class="mt-6 space-y-6">
+                      <li class="text-sm">
+                        <a href="#" class="text-gray-500 hover:text-gray-600">Who we are</a>
+                      </li>
+  
+                      <li class="text-sm">
+                        <a href="#" class="text-gray-500 hover:text-gray-600">Technology</a>
+                      </li>
+  
+                      <li class="text-sm">
+                        <a href="#" class="text-gray-500 hover:text-gray-600">Social media</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h3 class="text-sm font-medium text-gray-900">Legal</h3>
+                    <ul role="list" class="mt-6 space-y-6">
+                      <li class="text-sm">
+                        <a href="#" class="text-gray-500 hover:text-gray-600">Terms of Service</a>
+                      </li>
+  
+                      <li class="text-sm">
+                        <a href="#" class="text-gray-500 hover:text-gray-600">Return Policy</a>
+                      </li>
+  
+                      <li class="text-sm">
+                        <a href="#" class="text-gray-500 hover:text-gray-600">Privacy Policy</a>
+                      </li>
+  
+                      <li class="text-sm">
+                        <a href="#" class="text-gray-500 hover:text-gray-600">Shipping Policy</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="lg:grid lg:grid-cols-2 lg:gap-x-6 xl:gap-x-8">
+            <div class="flex items-center rounded-lg bg-gray-100 p-6 sm:p-10">
+              <div class="mx-auto max-w-sm">
+                <h3 class="font-semibold text-gray-900">Sign up for our newsletter</h3>
+                <p class="mt-2 text-sm text-gray-500">The latest news, articles, and resources, sent to your inbox weekly.</p>
+                <form class="mt-4 sm:mt-6 sm:flex">
+                  <label for="email-address" class="sr-only">Email address</label>
+                  <input id="email-address" type="text" autocomplete="email" required class="w-full min-w-0 appearance-none rounded-md border border-gray-300 bg-white py-2 px-4 text-base text-gray-900 placeholder-gray-500 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500">
+                  <div class="mt-3 sm:mt-0 sm:ml-4 sm:flex-shrink-0">
+                    <button type="submit" class="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-base font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-white">Sign up</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+  
+            <div class="relative mt-6 flex items-center py-12 px-6 sm:py-16 sm:px-10 lg:mt-0">
+              <div class="absolute inset-0 overflow-hidden rounded-lg">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Raccoon_%28Procyon_lotor%29_2.jpg/1024px-Raccoon_%28Procyon_lotor%29_2.jpg" alt="" class="h-full w-full object-cover object-center saturate-0 filter">
+                <div class="absolute inset-0 bg-indigo-600 bg-opacity-90"></div>
+              </div>
+              <div class="relative mx-auto max-w-sm text-center">
+                <h3 class="text-2xl font-bold tracking-tight text-white">Join Philip Stein Club</h3>
+                <p class="mt-2 text-gray-200">
+                  Click here to find out more about our club membership. <a href="#" class="whitespace-nowrap font-bold text-white hover:text-gray-200">Go now<span aria-hidden="true"> &rarr;</span></a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="py-10 md:flex md:items-center md:justify-between">
+          <div class="text-center md:text-left">
+            <p class="text-sm text-gray-500">&copy; 2021 All Rights Reserved</p>
+          </div>
+  
+          <div class="mt-4 flex items-center justify-center md:mt-0">
+            <div class="flex space-x-8">
+              <a href="#" class="text-sm text-gray-500 hover:text-gray-600">Accessibility</a>
+  
+              <a href="#" class="text-sm text-gray-500 hover:text-gray-600">Privacy</a>
+  
+              <a href="#" class="text-sm text-gray-500 hover:text-gray-600">Terms</a>
+            </div>
+  
+            <div class="ml-6 border-l border-gray-200 pl-6">
+              <a href="#" class="flex items-center text-gray-500 hover:text-gray-600">
+                <img src="https://tailwindui.com/img/flags/flag-canada.svg" alt="" class="h-auto w-5 flex-shrink-0">
+                <span class="ml-3 text-sm">Change</span>
+                <span class="sr-only">location and currency</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  
+</body>
+</html>
