@@ -1001,6 +1001,10 @@ select {
   margin-bottom: -1.5rem;
 }
 
+.-mr-1 {
+  margin-right: -0.25rem;
+}
+
 .block {
   display: block;
 }
@@ -1139,6 +1143,10 @@ select {
 
 .w-4 {
   width: 1rem;
+}
+
+.w-56 {
+  width: 14rem;
 }
 
 .min-w-max {
@@ -1843,6 +1851,10 @@ select {
   padding-left: 1.5rem;
 }
 
+.text-left {
+  text-align: left;
+}
+
 .text-center {
   text-align: center;
 }
@@ -2112,6 +2124,10 @@ select {
   transition-duration: 700ms;
 }
 
+.duration-100 {
+  transition-duration: 100ms;
+}
+
 .ease-linear {
   transition-timing-function: linear;
 }
@@ -2259,6 +2275,10 @@ select {
 
 .focus\:ring-offset-white:focus {
   --tw-ring-offset-color: #fff;
+}
+
+.focus\:ring-offset-gray-100:focus {
+  --tw-ring-offset-color: #f3f4f6;
 }
 
 .group:hover .group-hover\:text-gray-500 {
