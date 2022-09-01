@@ -2108,6 +2108,10 @@ select {
   transition-duration: 75ms;
 }
 
+.duration-700 {
+  transition-duration: 700ms;
+}
+
 .ease-linear {
   transition-timing-function: linear;
 }
@@ -2350,6 +2354,10 @@ select {
     right: auto;
     bottom: auto;
     left: auto;
+  }
+
+  .sm\:visible {
+    visibility: visible;
   }
 
   .sm\:invisible {
@@ -2652,6 +2660,10 @@ select {
 }
 
 @media (min-width: 768px) {
+  .md\:visible {
+    visibility: visible;
+  }
+
   .md\:mt-16 {
     margin-top: 4rem;
   }
@@ -2735,6 +2747,10 @@ select {
 
   .lg\:aspect-h-1 {
     --tw-aspect-h: 1;
+  }
+
+  .lg\:visible {
+    visibility: visible;
   }
 
   .lg\:absolute {
@@ -3043,6 +3059,10 @@ select {
 }
 
 @media (min-width: 1280px) {
+  .xl\:visible {
+    visibility: visible;
+  }
+
   .xl\:col-span-2 {
     grid-column: span 2 / span 2;
   }
